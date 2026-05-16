@@ -1,0 +1,23 @@
+{
+  "name": "tiktok-genesys-adapter",
+  "version": "1.0.0",
+  "description": "Adapter bridging TikTok Business Messaging (DMs + Comments) with Genesys Cloud Open Messaging",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "winston": "^3.13.0",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
