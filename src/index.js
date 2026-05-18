@@ -57,6 +57,22 @@ app.get('/health', (_req, res) => {
   });
 });
 
+// ─── Legal Pages (required for TikTok app submission) ─────────────────────
+
+app.get('/terms', (_req, res) => {
+  res.send('<html><body><h1>Terms of Service</h1><p>This is an internal integration between TikTok and Genesys Cloud. For more information, contact the system administrator.</p></body></html>');
+});
+
+app.get('/privacy', (_req, res) => {
+  res.send('<html><body><h1>Privacy Policy</h1><p>This is an internal integration between TikTok and Genesys Cloud. No personal data is stored. For more information, contact the system administrator.</p></body></html>');
+});
+
+// ─── TikTok Site Verification ──────────────────────────────────────────────
+
+app.get('/tiktoksht3qLK0Bmxchx1TPJ7lKcaNE9g2fgim.txt', (_req, res) => {
+  res.type('text/plain').send('tiktok-developers-site-verification=sht3qLK0Bmxchx1TPJ7lKcaNE9g2fgim');
+});
+
 // ─── Webhook Routes ────────────────────────────────────────────────────────
 
 // TikTok webhook: receives inbound events (DMs, comments)
