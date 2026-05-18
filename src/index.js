@@ -77,6 +77,10 @@ app.get('/tiktokcrcfh2ayqPNBjLNmYDIZjMpdKFH3wJEK.txt', (_req, res) => {
   res.type('text/plain').send('tiktok-developers-site-verification=crcfh2ayqPNBjLNmYDIZjMpdKFH3wJEK');
 });
 
+app.get('/tiktokNNxqLC6ZX2ep8SmTcBJLVkAd0AkqZ3qW.txt', (_req, res) => {
+  res.type('text/plain').send('tiktok-developers-site-verification=NNxqLC6ZX2ep8SmTcBJLVkAd0AkqZ3qW');
+});
+
 // ─── Webhook Routes ────────────────────────────────────────────────────────
 
 // TikTok webhook: receives inbound events (DMs, comments)
