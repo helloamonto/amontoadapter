@@ -47,6 +47,9 @@ app.use(
 
 app.use(express.urlencoded({ extended: true }));
 
+// ─── Static Files (TikTok verification files, etc.) ───────────────────────
+app.use(express.static(require('path').join(__dirname, '../public')));
+
 // ─── Health Check ──────────────────────────────────────────────────────────
 
 app.get('/health', (_req, res) => {
