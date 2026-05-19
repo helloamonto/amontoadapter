@@ -133,7 +133,7 @@ app.get('/', (_req, res) => {
 
   <div class="card" style="margin-top:2rem;">
     <h2 style="margin-top:0">Contact</h2>
-    <p>For support or enquiries, contact us at <a href="mailto:lek@amonto.co.th">nsutthaphol@gmail.com</a>.</p>
+    <p>For support or enquiries, contact us at <a href="mailto:lek@amonto.co.th">lek@amonto.co.th</a>.</p>
   </div>
 </main>
 <footer>&copy; ${new Date().getFullYear()} Amonto. All rights reserved. &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></footer>
@@ -185,7 +185,7 @@ app.get('/terms', (_req, res) => {
   <p>Amonto may modify these Terms at any time by updating the effective date. Continued use constitutes acceptance of the revised Terms.</p>
 
   <h2>11. Contact</h2>
-  <p>Questions? Email us at <a href="mailto:nsutthaphol@gmail.com">nsutthaphol@gmail.com</a>.</p>
+  <p>Questions? Email us at <a href="mailto:lek@amonto.co.th">lek@amonto.co.th</a>.</p>
 </main>
 <footer>&copy; ${new Date().getFullYear()} Amonto. &nbsp;&middot;&nbsp; <a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></footer>
 </body></html>`);
@@ -235,7 +235,7 @@ app.get('/privacy', (_req, res) => {
   <p>We may update this policy from time to time. The effective date at the top of this page will reflect any changes.</p>
 
   <h2>9. Contact</h2>
-  <p>Privacy questions? Email us at <a href="mailto:nsutthaphol@gmail.com">nsutthaphol@gmail.com</a>.</p>
+  <p>Privacy questions? Email us at <a href="mailto:lek@amonto.co.th">lek@amonto.co.th</a>.</p>
 </main>
 <footer>&copy; ${new Date().getFullYear()} Amonto. &nbsp;&middot;&nbsp; <a href="/">Home</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a></footer>
 </body></html>`);
