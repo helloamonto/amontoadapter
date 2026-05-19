@@ -133,7 +133,7 @@ app.get('/', (_req, res) => {
 
   <div class="card" style="margin-top:2rem;">
     <h2 style="margin-top:0">Contact</h2>
-    <p>For support or enquiries, contact us at <a href="mailto:nsutthaphol@gmail.com">nsutthaphol@gmail.com</a>.</p>
+    <p>For support or enquiries, contact us at <a href="mailto:lek@amonto.co.th">nsutthaphol@gmail.com</a>.</p>
   </div>
 </main>
 <footer>&copy; ${new Date().getFullYear()} Amonto. All rights reserved. &nbsp;&middot;&nbsp; <a href="/terms">Terms of Service</a> &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></footer>
