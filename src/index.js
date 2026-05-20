@@ -56,7 +56,7 @@ app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    service: 'tiktok-genesys-adapter',
+    service: 'amontoadapter',
   });
 });
 
@@ -282,7 +282,7 @@ app.use((err, _req, res, _next) => {
 const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 app.listen(PORT, () => {
-  logger.info(`TikTok-Genesys adapter listening on port ${PORT}`);
+  logger.info(`Amonto adapter listening on port ${PORT}`);
   logger.info('Webhook endpoints:');
   logger.info(`  TikTok  → POST /webhook/tiktok`);
   logger.info(`  Genesys → POST /webhook/genesys`);

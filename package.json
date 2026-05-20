@@ -1,5 +1,5 @@
 {
-  "name": "tiktok-genesys-adapter",
+  "name": "amonto-adapter",
   "version": "1.0.0",
   "description": "Adapter bridging TikTok Business Messaging (DMs + Comments) with Genesys Cloud Open Messaging",
   "main": "src/index.js",
