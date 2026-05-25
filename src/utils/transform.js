@@ -68,7 +68,7 @@ function tiktokDMToGenesys(payload) {
       from: {
         id: content.from_user_id,
         idType: 'Opaque',
-        displayName: content.from_username || content.from_user_id,
+        nickname: content.from_username || content.from_user_id,
       },
     },
     type: 'Text',
@@ -102,7 +102,7 @@ function tiktokCommentToGenesys(payload) {
       from: {
         id: content.user_id,
         idType: 'Opaque',
-        displayName: content.username || content.user_id,
+        nickname: content.username || content.user_id,
       },
     },
     type: 'Text',
