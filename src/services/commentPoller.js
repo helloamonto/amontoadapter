@@ -53,7 +53,7 @@ class CommentPoller {
 
   stop() {
     if (this.task) {
-      this.task.destroy();
+      this.task.stop();
       logger.info('Comment poller stopped');
     }
   }
