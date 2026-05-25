@@ -64,6 +64,7 @@ function tiktokDMToGenesys(payload) {
       platform: 'Open',
       type: 'Private',
       messageId: content.message_id,
+      time: new Date(payload.create_time * 1000).toISOString(),
       to: { id: INTEGRATION_ID() },
       from: {
         id: content.from_user_id,
@@ -91,11 +92,12 @@ function tiktokCommentToGenesys(payload) {
       platform: 'Open',
       type: 'Public',
       messageId: content.comment_id,
+      time: new Date((content.create_time || payload.create_time) * 1000).toISOString(),
       to: { id: INTEGRATION_ID() },
       from: {
         id: content.user_id,
         idType: 'Opaque',
-        nickname: content.username || content.user_id,
+        firstName: content.username || content.user_id,
       },
     },
     type: 'Text',
