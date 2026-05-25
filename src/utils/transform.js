@@ -68,19 +68,12 @@ function tiktokDMToGenesys(payload) {
       from: {
         id: content.from_user_id,
         idType: 'Opaque',
-        nickname: content.from_username || content.from_user_id,
+        firstName: content.from_username || content.from_user_id,
       },
     },
     type: 'Text',
     text,
     originatingEntity: 'Human',
-    metadata: {
-      customAttributes: {
-        source: 'tiktok_dm',
-        tiktokConversationId: content.conversation_id,
-        tiktokMessageId: content.message_id,
-      },
-    },
   };
 }
 
