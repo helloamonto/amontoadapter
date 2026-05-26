@@ -20,10 +20,10 @@ function verifyGenesysSignature(rawBody, signature, secret) {
       .createHmac('sha256', secret)
       .update(rawBody, 'utf8')
       .digest('hex');
-    return crypto.timingSafeEqual(
-      Buffer.from(signature),
-      Buffer.from(expected)
-    );
+    const sigBuf = Buffer.from(signature);
+    const expBuf = Buffer.from(expected);
+    if (sigBuf.length !== expBuf.length) return false;
+    return crypto.timingSafeEqual(sigBuf, expBuf);
   } catch (err) {
     logger.error('Genesys signature verification error', { err: err.message });
     return false;
@@ -47,10 +47,10 @@ function verifyTikTokSignature(rawBody, signature, secret) {
       .createHmac('sha256', secret)
       .update(rawBody, 'utf8')
       .digest('hex');
-    return crypto.timingSafeEqual(
-      Buffer.from(signature),
-      Buffer.from(expected)
-    );
+    const sigBuf = Buffer.from(signature);
+    const expBuf = Buffer.from(expected);
+    if (sigBuf.length !== expBuf.length) return false;
+    return crypto.timingSafeEqual(sigBuf, expBuf);
   } catch (err) {
     logger.error('TikTok signature verification error', { err: err.message });
     return false;
