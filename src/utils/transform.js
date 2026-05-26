@@ -90,7 +90,7 @@ function tiktokCommentToGenesys(payload) {
       // Use videoId + userId as a stable conversation thread ID for comments
       id: `comment_${content.video_id}_${content.user_id}`,
       platform: 'Open',
-      type: 'Public',
+      type: 'Private',
       messageId: content.comment_id,
       time: new Date((content.create_time || payload.create_time) * 1000).toISOString(),
       to: { id: INTEGRATION_ID() },
@@ -103,13 +103,6 @@ function tiktokCommentToGenesys(payload) {
     type: 'Text',
     text: content.comment || content.text || '',
     originatingEntity: 'Human',
-    metadata: {
-      customAttributes: {
-        source: 'tiktok_comment',
-        tiktokVideoId: content.video_id,
-        tiktokCommentId: content.comment_id,
-      },
-    },
   };
 }
 
